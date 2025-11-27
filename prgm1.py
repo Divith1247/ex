@@ -1,4 +1,4 @@
-import numpy as np
+'''import numpy as np
 a=np.array([5,6,7,8,9,1])
 print(a)
 sum=np.sum(a)
@@ -16,4 +16,12 @@ print(mi_i)
 st=np.std(a)
 print(st)
 var=np.var(a)
-print(var)
+print(var)'''
+
+import pandas as pd
+df=pd.DataFrame([[4,5,6],[7,8,9],[1,2,3]],columns=['math','python','java'])
+print(df)
+print(df.sum())
+print(df.agg(['sum','min','max','count','size','std']))
+print(df.describe())
+print(df.groupby("java"))
